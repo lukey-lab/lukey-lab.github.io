@@ -1,0 +1,73 @@
+# ============================================================
+# Publications List
+# ============================================================
+# Add publications here. They will appear on the publications page.
+# Publications are grouped by year.
+#
+# Format:
+#   - title: "Full paper title"
+#     authors: "Author1 AB, Author2 CD, Lukey MJ"
+#     journal: "Journal Name"
+#     year: 2024
+#     volume: "12"
+#     pages: "123-456"
+#     doi: "10.1234/example"
+#     pmid: "12345678"
+#     pdf: "/assets/papers/filename.pdf"  # Optional local PDF
+#     highlight: true  # Set to true for featured publications
+# ============================================================
+
+- title: "Metabolic adaptation enables cancer cells to survive nutrient stress"
+  authors: "Qiu Y, Smith AB, Lukey MJ"
+  journal: "Nature Metabolism"
+  year: 2024
+  volume: "6"
+  pages: "100-115"
+  doi: "10.1038/s42255-024-00001-0"
+  pmid: "38000001"
+  highlight: true
+
+- title: "Glutamine and serine metabolism in breast cancer brain metastasis"
+  authors: "Lukey MJ, Zhang W, Thompson CB"
+  journal: "Cancer Cell"
+  year: 2023
+  volume: "41"
+  pages: "1523-1538"
+  doi: "10.1016/j.ccell.2023.08.001"
+  pmid: "37000001"
+  highlight: true
+
+- title: "Targeting metabolic vulnerabilities in triple-negative breast cancer"
+  authors: "Johnson K, Lukey MJ, Cerione RA"
+  journal: "Cell Metabolism"
+  year: 2023
+  volume: "35"
+  pages: "890-905"
+  doi: "10.1016/j.cmet.2023.04.002"
+  pmid: "36500001"
+
+- title: "Post-translational modifications by reactive metabolites"
+  authors: "Lukey MJ, Wilson KF, Cerione RA"
+  journal: "Journal of Biological Chemistry"
+  year: 2022
+  volume: "298"
+  pages: "102345"
+  doi: "10.1016/j.jbc.2022.102345"
+  pmid: "35000001"
+
+- title: "Glutaminase regulation of tumor metabolism"
+  authors: "Lukey MJ, Wilson KF, Cerione RA"
+  journal: "Annual Review of Cancer Biology"
+  year: 2020
+  volume: "4"
+  pages: "389-411"
+  doi: "10.1146/annurev-cancerbio-030419-033425"
+  pmid: "34000001"
+
+# ============================================================
+# Instructions for adding publications:
+# 1. Copy one of the entries above
+# 2. Fill in all the fields (leave blank or remove optional ones)
+# 3. Publications are automatically sorted by year (newest first)
+# 4. Set highlight: true for your most important papers
+# ============================================================

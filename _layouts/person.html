@@ -1,0 +1,61 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">{{ page.name }}</h1>
+    <p class="page-subtitle">{{ page.role }}</p>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container">
+    <div class="pi-card">
+      <div class="pi-photo">
+        <img src="{{ page.photo | default: '/assets/images/placeholder-person.jpg' | relative_url }}" alt="{{ page.name }}">
+      </div>
+      <div class="pi-info">
+        <h2>{{ page.name }}</h2>
+        <p class="pi-title">{{ page.role }}</p>
+
+        {{ content }}
+
+        {% if page.education %}
+          <h3 class="mt-8">Education</h3>
+          <ul>
+            {% for edu in page.education %}
+              <li>{{ edu }}</li>
+            {% endfor %}
+          </ul>
+        {% endif %}
+
+        {% if page.email or page.twitter or page.google_scholar %}
+          <h3 class="mt-8">Contact</h3>
+          <div class="team-links" style="justify-content: flex-start;">
+            {% if page.email %}
+              <a href="mailto:{{ page.email }}" title="Email">
+                <i class="fas fa-envelope"></i>
+              </a>
+            {% endif %}
+            {% if page.twitter %}
+              <a href="https://twitter.com/{{ page.twitter }}" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+              </a>
+            {% endif %}
+            {% if page.google_scholar %}
+              <a href="{{ page.google_scholar }}" target="_blank" title="Google Scholar">
+                <i class="fas fa-graduation-cap"></i>
+              </a>
+            {% endif %}
+            {% if page.orcid %}
+              <a href="https://orcid.org/{{ page.orcid }}" target="_blank" title="ORCID">
+                <i class="fab fa-orcid"></i>
+              </a>
+            {% endif %}
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

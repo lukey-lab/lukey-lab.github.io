@@ -1,0 +1,26 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <p class="news-date">{{ page.date | date: "%B %d, %Y" }}</p>
+    <h1 class="page-title">{{ page.title }}</h1>
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container-narrow">
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="border-radius: var(--border-radius-lg); margin-bottom: var(--space-8);">
+    {% endif %}
+
+    {{ content }}
+
+    <div class="mt-8">
+      <a href="{{ '/news/' | relative_url }}" class="btn btn-secondary">
+        <i class="fas fa-arrow-left"></i> Back to News
+      </a>
+    </div>
+  </div>
+</section>

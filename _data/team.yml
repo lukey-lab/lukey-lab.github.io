@@ -1,0 +1,71 @@
+# ============================================================
+# Team Members
+# ============================================================
+# Add team members here. They will appear on the team page.
+#
+# Categories: pi, postdoc, graduate, undergraduate, staff, alumni
+#
+# Format:
+#   - name: "Full Name"
+#     role: "Position Title"
+#     category: "postdoc"
+#     photo: "/assets/images/team/firstname-lastname.jpg"
+#     bio: "Brief biography"
+#     email: "email@cshl.edu"
+#     twitter: "username"  # Without @
+#     google_scholar: "https://scholar.google.com/..."
+#     orcid: "0000-0000-0000-0000"
+#     education:
+#       - "Ph.D., University Name, Year"
+#       - "B.S., University Name, Year"
+# ============================================================
+
+# Principal Investigator
+- name: "Michael Lukey"
+  role: "Principal Investigator"
+  category: "pi"
+  photo: "/assets/images/team/michael-lukey.jpg"
+  bio: "Dr. Lukey leads the Cancer Metabolism Laboratory at Cold Spring Harbor Laboratory. His research focuses on understanding how cancer cells reprogram their metabolism to support tumor growth and metastasis."
+  email: "lukey@cshl.edu"
+  education:
+    - "Ph.D., University of Oxford, U.K., 2010"
+    - "Postdoctoral Fellow, Cornell University"
+
+# Postdoctoral Fellows
+- name: "Yijian Qiu"
+  role: "Postdoctoral Fellow"
+  category: "postdoc"
+  photo: "/assets/images/team/placeholder.jpg"
+  bio: "Investigating metabolic adaptations in breast cancer metastasis to the brain."
+  email: ""
+
+# Graduate Students
+- name: "Graduate Student"
+  role: "Ph.D. Candidate"
+  category: "graduate"
+  photo: "/assets/images/team/placeholder.jpg"
+  bio: "Working on nutrient sensing pathways in cancer cells."
+  email: ""
+
+# Staff
+- name: "Lab Manager"
+  role: "Laboratory Manager"
+  category: "staff"
+  photo: "/assets/images/team/placeholder.jpg"
+  bio: "Managing day-to-day laboratory operations."
+  email: ""
+
+# Alumni (former lab members)
+# - name: "Former Member"
+#   role: "Former Postdoctoral Fellow"
+#   category: "alumni"
+#   current_position: "Assistant Professor, University Name"
+
+# ============================================================
+# Instructions for adding team members:
+# 1. Copy one of the entries above
+# 2. Fill in the name, role, category, and other fields
+# 3. Add a photo to /assets/images/team/ and update the path
+# 4. Categories determine grouping on the team page
+# 5. Alumni can have a "current_position" field
+# ============================================================

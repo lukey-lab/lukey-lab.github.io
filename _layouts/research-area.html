@@ -1,0 +1,35 @@
+---
+layout: default
+---
+
+<div class="page-header">
+  <div class="container">
+    <h1 class="page-title">{{ page.title }}</h1>
+    {% if page.subtitle %}
+      <p class="page-subtitle">{{ page.subtitle }}</p>
+    {% endif %}
+  </div>
+</div>
+
+<section class="section">
+  <div class="container container-narrow">
+    {% if page.image %}
+      <img src="{{ page.image | relative_url }}" alt="{{ page.title }}" style="border-radius: var(--border-radius-lg); margin-bottom: var(--space-8);">
+    {% endif %}
+
+    {{ content }}
+
+    {% if page.publications %}
+      <h2 class="mt-8">Related Publications</h2>
+      <div class="publications-list">
+        {% for pub in page.publications %}
+          <div class="publication-item">
+            <div class="publication-title">{{ pub.title }}</div>
+            <div class="publication-authors">{{ pub.authors }}</div>
+            <div class="publication-journal">{{ pub.journal }}</div>
+          </div>
+        {% endfor %}
+      </div>
+    {% endif %}
+  </div>
+</section>

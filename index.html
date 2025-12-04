@@ -1,0 +1,147 @@
+---
+layout: home
+title: Home
+---
+
+<!-- Hero Section -->
+<section class="hero">
+  <div class="container">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">Lukey Lab</h1>
+        <p class="hero-subtitle">
+          Investigating metabolic adaptation during tumorigenesis and metastasis to identify therapeutic vulnerabilities in cancer cells.
+        </p>
+        <div style="display: flex; gap: var(--space-4); flex-wrap: wrap;">
+          <a href="{{ '/research/' | relative_url }}" class="btn btn-secondary btn-lg">
+            Our Research <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+          </a>
+          <a href="{{ '/contact/' | relative_url }}" class="btn btn-outline btn-lg">
+            Contact Us
+          </a>
+        </div>
+      </div>
+      <div class="hero-image">
+        <img src="{{ '/assets/images/lab-hero.svg' | relative_url }}" alt="Lukey Lab Research">
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- About Section -->
+<section class="section">
+  <div class="container">
+    <div class="pi-card">
+      <div class="pi-photo">
+        <img src="{{ site.pi.photo | relative_url }}" alt="{{ site.pi.name }}">
+      </div>
+      <div class="pi-info">
+        <h2>{{ site.pi.name }}, Ph.D.</h2>
+        <p class="pi-title">{{ site.pi.title }}<br>{{ site.pi.secondary_title }}</p>
+        <p>
+          Tumor growth depends upon cancer cells acquiring nutrients from their environment and using these molecules to fuel proliferation. Our laboratory investigates the nature and regulation of metabolic adaptation during tumorigenesis and metastasis, with the goal of identifying therapeutic vulnerabilities in cancer cells.
+        </p>
+        <p>
+          We are especially interested in the biochemical processes underlying nutrient sensing and metabolic/redox homeostasis, including regulation of the protein post-translational modification landscape by reactive metabolites. We also study the reciprocal connections between tumor metabolism and host physiology.
+        </p>
+        <a href="{{ '/team/' | relative_url }}" class="btn btn-primary">
+          Meet Our Team <i class="fas fa-arrow-right" style="margin-left: 8px;"></i>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Research Highlights -->
+<section class="section section-alt">
+  <div class="container">
+    <h2 class="section-title">Research Focus</h2>
+    <p class="section-subtitle">
+      Understanding how cancer cells adapt their metabolism to survive and spread
+    </p>
+
+    <div class="research-grid">
+      <div class="card research-card hover-lift">
+        <div class="research-icon">
+          <i class="fas fa-flask"></i>
+        </div>
+        <h3 class="card-title">Metabolic Reprogramming</h3>
+        <p class="card-text">
+          Investigating how oncogenes drive metabolic changes that enable tumor growth, including altered nutrient acquisition and biosynthetic pathways.
+        </p>
+        <a href="{{ '/research/' | relative_url }}#metabolic-reprogramming" class="btn btn-primary">
+          Learn More
+        </a>
+      </div>
+
+      <div class="card research-card hover-lift">
+        <div class="research-icon">
+          <i class="fas fa-dna"></i>
+        </div>
+        <h3 class="card-title">Nutrient Sensing</h3>
+        <p class="card-text">
+          Understanding how cancer cells sense and respond to nutrient availability, and how these pathways can be targeted therapeutically.
+        </p>
+        <a href="{{ '/research/' | relative_url }}#nutrient-sensing" class="btn btn-primary">
+          Learn More
+        </a>
+      </div>
+
+      <div class="card research-card hover-lift">
+        <div class="research-icon">
+          <i class="fas fa-project-diagram"></i>
+        </div>
+        <h3 class="card-title">Metastasis & Metabolism</h3>
+        <p class="card-text">
+          Exploring the metabolic adaptations required for cancer cells to metastasize, particularly breast cancer spread to the brain.
+        </p>
+        <a href="{{ '/research/' | relative_url }}#metastasis" class="btn btn-primary">
+          Learn More
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- News Section -->
+<section class="section">
+  <div class="container">
+    <h2 class="section-title">Latest News</h2>
+    <p class="section-subtitle">
+      Updates from our lab and the cancer metabolism research community
+    </p>
+
+    <div class="news-grid">
+      {% assign sorted_news = site.data.news | sort: 'date' | reverse %}
+      {% for item in sorted_news limit:3 %}
+        <div class="card news-card hover-lift">
+          <div class="card-body">
+            <span class="news-date">{{ item.date | date: "%B %d, %Y" }}</span>
+            <h3 class="news-title">{{ item.title }}</h3>
+            <p class="news-excerpt">{{ item.excerpt }}</p>
+            {% if item.link %}
+              <a href="{{ item.link }}" class="btn btn-primary" {% if item.external %}target="_blank" rel="noopener"{% endif %}>
+                Read More <i class="fas fa-external-link-alt" style="margin-left: 4px; font-size: 0.8em;"></i>
+              </a>
+            {% endif %}
+          </div>
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Contact CTA -->
+<section class="section" style="background: linear-gradient(135deg, var(--color-primary) 0%, var(--color-primary-light) 100%); color: white;">
+  <div class="container text-center">
+    <h2 style="color: white; margin-bottom: var(--space-4);">Interested in Our Research?</h2>
+    <p style="color: rgba(255,255,255,0.9); max-width: 600px; margin: 0 auto var(--space-8);">
+      Get in touch to learn more about our work in cancer metabolism.
+    </p>
+    <div style="display: flex; gap: var(--space-4); justify-content: center; flex-wrap: wrap;">
+      <a href="{{ '/contact/' | relative_url }}" class="btn btn-secondary btn-lg">
+        Contact Us
+      </a>
+    </div>
+  </div>
+</section>

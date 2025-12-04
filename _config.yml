@@ -1,0 +1,107 @@
+# ============================================================
+# Lukey Lab Website Configuration
+# ============================================================
+# This file contains the main settings for your lab website.
+# Edit these values to customize your site.
+# ============================================================
+
+# Site Settings
+title: "Lukey Lab"
+description: "Cancer Metabolism Research at Cold Spring Harbor Laboratory"
+url: "https://lukey-lab.github.io"
+baseurl: ""
+
+# Lab Principal Investigator Information
+pi:
+  name: "Michael Lukey"
+  title: "Associate Professor"
+  secondary_title: "Cancer Center Assistant Director of Shared Resources"
+  email: "lukey@cshl.edu"
+  phone: "516-367-5016"
+  photo: "/assets/images/team/michael-lukey.jpg"
+
+# Institution Information
+institution:
+  name: "Cold Spring Harbor Laboratory"
+  department: "Cancer Center"
+  building: "Demerec Laboratory"
+  address: "1 Bungtown Road, Cold Spring Harbor, NY 11724"
+  logo: "/assets/images/cshl_logo.png"
+
+# Social Media Links (leave blank if not applicable)
+social:
+  twitter: ""
+  github: "lukey-lab"
+  google_scholar: ""
+  orcid: ""
+  linkedin: ""
+
+# Navigation Menu
+# Add or remove menu items here
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Research"
+    url: "/research/"
+  - title: "Team"
+    url: "/team/"
+  - title: "Publications"
+    url: "/publications/"
+  # - title: "Join Us"
+  #   url: "/join/"
+  - title: "Contact"
+    url: "/contact/"
+
+# Build Settings
+markdown: kramdown
+highlighter: rouge
+permalink: pretty
+
+# Exclude files from build
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md
+  - LICENSE
+
+# Collections for easy content management
+collections:
+  team:
+    output: true
+    permalink: /team/:name/
+  research:
+    output: true
+    permalink: /research/:name/
+  news:
+    output: true
+    permalink: /news/:name/
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+      type: "team"
+    values:
+      layout: "person"
+  - scope:
+      path: ""
+      type: "research"
+    values:
+      layout: "research-area"
+  - scope:
+      path: ""
+      type: "news"
+    values:
+      layout: "news-post"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+
+# Plugins
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap

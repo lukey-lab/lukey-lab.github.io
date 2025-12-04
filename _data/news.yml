@@ -1,0 +1,34 @@
+# ============================================================
+# News Items
+# ============================================================
+# Add news items here. They will appear on the homepage and news page.
+# Format:
+#   - date: YYYY-MM-DD
+#     title: "News Title"
+#     excerpt: "Brief description of the news item"
+#     link: "URL to full article (optional)"
+#     external: true  # Set to true if link goes to external site
+# ============================================================
+
+- date: 2024-01-15
+  title: "New Publication in Nature Metabolism"
+  excerpt: "Our latest research on glutamine metabolism in breast cancer has been published. We found that simultaneous depletion of glutamine and PHGDH stunts cancer cell growth."
+  link: "https://www.cshl.edu/how-breast-cancer-goes-hungry/"
+  external: true
+
+- date: 2023-09-20
+  title: "METAvivor Grant Renewal"
+  excerpt: "We are excited to announce the renewal of our METAvivor Early Career Investigator Award to continue our research on breast cancer metastasis."
+
+- date: 2023-06-10
+  title: "Welcome New Lab Members"
+  excerpt: "We welcome our newest postdoctoral fellows and graduate students to the lab. Looking forward to exciting research ahead!"
+
+# ============================================================
+# Instructions for adding news:
+# 1. Copy one of the entries above
+# 2. Update the date, title, and excerpt
+# 3. Add a link if there's a related article
+# 4. Set external: true if the link goes to another website
+# 5. News items are automatically sorted by date (newest first)
+# ============================================================
